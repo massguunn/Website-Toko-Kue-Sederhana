@@ -1,0 +1,197 @@
+/* Reset dan Global Style */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  background: #f89ad1;
+  color: #ff0095;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Memastikan footer berada di bawah */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  height: 10rem;
+  background: #f8d1f8;
+}
+
+.logo {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.icon-cart i {
+  font-size: 3rem;
+  color: #ff0095;
+  transition: transform 0.3s ease;
+}
+
+.icon-cart i:hover {
+  transform: scale(1.2);
+  color: #fff;
+}
+
+/* Title Section */
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.title h3 {
+  font-size: 2.4rem;
+  color: #ff0095;
+}
+
+/* Swiper Container */
+.swiper {
+  perspective: 1000px;
+  margin-bottom: 3rem; /* Mengatur jarak bawah */
+}
+
+.swiper-slide {
+  width: 20rem; /* Lebar slide lebih besar */
+  height: auto;
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+
+.tranding-slide-img img {
+  width: 100%;
+  height: 20rem; /* Tinggi gambar lebih besar */
+  object-fit: cover;
+  border-radius: 1.5rem;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.swiper-slide-active .tranding-slide-img img {
+  transform: scale(1.15); /* Efek lebih besar saat aktif */
+  opacity: 1;
+  z-index: 10;
+}
+
+.swiper-slide-prev .tranding-slide-img img,
+.swiper-slide-next .tranding-slide-img img {
+  transform: scale(1); /* Gambar sebelah tetap besar */
+  opacity: 0.9;
+}
+
+/* Media Sosial */
+.media {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem 0;
+  margin-top: 10rem;
+}
+
+.media a {
+  color: #ff0095;
+  font-size: 2.5rem;
+  transition: color 0.3s ease;
+}
+
+.media a:hover {
+  color: #fff;
+}
+
+/* Footer Style */
+footer {
+  background-color: #f8d1f8; /* Warna latar footer */
+  color: #ff0095; /* Warna teks */
+  text-align: center;
+  padding: 1.5rem 1rem; /* Ruang dalam atas & bawah */
+  font-size: 1.6rem; /* Ukuran font */
+  font-weight: 500;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Bayangan halus di atas */
+  margin-top: 11rem; /* Memastikan footer berada di bawah */
+}
+
+footer p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; /* Jarak antara teks dan ikon hati */
+}
+
+footer p i {
+  color: red; /* Warna hati */
+  animation: pulse 1.5s infinite; /* Efek animasi hati berdenyut */
+}
+
+/* Media Query */
+@media (max-width: 1200px) {
+  .swiper-slide {
+    width: 18rem;
+  }
+
+  .tranding-slide-img img {
+    height: 18rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .swiper-slide {
+    width: 16rem;
+  }
+
+  .tranding-slide-img img {
+    height: 16rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .swiper-slide {
+    width: 14rem;
+  }
+
+  .tranding-slide-img img {
+    height: 14rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .swiper-slide {
+    width: 12rem;
+  }
+
+  .tranding-slide-img img {
+    height: 12rem;
+  }
+}
+
+/* Animasi Heart Pulse */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
